@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/player_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Veri Seti",
+          "Player Project",
         ),
         backgroundColor: Color.fromARGB(255, 13, 104, 5),
       ),
@@ -69,23 +70,4 @@ class Category {
   final String youtubeLink;
 
   Category({required this.name, required this.youtubeLink});
-}
-
-class YouTubePlayerPage extends StatelessWidget {
-  final String youtubeLink;
-
-  YouTubePlayerPage(this.youtubeLink);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("YouTube Video"),
-      ),
-      body: Center(
-        // YouTube oynatıcıyı buraya ekleyebilirsiniz
-        child: Text('Oynatıcı buraya gelecek: $youtubeLink'),
-      ),
-    );
-  }
 }
